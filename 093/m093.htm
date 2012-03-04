@@ -1,0 +1,2283 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>World Weather Information Service - United States of America</title>
+<script language="JavaScript">
+<!--
+  function MM_openBrWindow(theURL,winName,features) { //v2.0
+    window.open(theURL,winName,features);
+  }
+
+  function MM_preloadImages() { //v3.0
+    var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+      var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+      if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+  }
+//-->
+</script>
+<link rel="stylesheet" href="../worldwx.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINHEIGHT="0" MARGINWIDTH="0" class="bodytext" onLoad="MM_preloadImages('../img/go_2.png')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="185" bgcolor="#00295B" align="center" valign="top"> 
+        
+    <table width="179" border="0" cellspacing="0" cellpadding="0">
+      <tr align="center">
+        <td height="106"><a href="../wmo.htm"><img src="../img/wmologo.png" alt="World Meteorological Organization" border="0"></a></td>
+      </tr>
+    </table>
+    <table width="182" border="0" cellspacing="0" cellpadding="1">
+      <tr>
+        <td><hr></td>
+      </tr>
+      <tr>
+        <td bgcolor="#6699FF" class="whitetext">&nbsp;Official Observations</td>
+      </tr>
+      <tr>
+        <td class="whitetext">
+          <table cellspacing=0 cellpadding=0>
+            <tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td><td class="whitetext"><a href="../cloud/" class="whitelink">Cloudiness & Rain</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="height8">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#6699FF" class="whitetext">&nbsp;Official Forecasts</td>
+      </tr>
+      <tr>
+        <td class="whitetext">&nbsp;Select WMO Region</td>
+      </tr>
+      <tr>
+        <td class="yellowtext">
+          <table cellspacing=0 cellpadding=0>
+            <tr>
+              
+              <td width=5 class="yellowtext">&nbsp;*&nbsp;</td><td width=160 class="yellowtext"><a href="../africa.htm" class="yellowlink">Africa</a></td><td width=5 class="yellowtext">&nbsp;</td>
+              
+            </tr>
+            <tr>
+              
+              <td width=5 class="yellowtext">&nbsp;*&nbsp;</td><td width=160 class="yellowtext"><a href="../asia.htm" class="yellowlink">Asia</a></td>
+              
+            </tr>
+            <tr>
+              
+              <td width=5 class="yellowtext">&nbsp;*&nbsp;</td><td width=160 class="yellowtext"><a href="../europe.htm" class="yellowlink">Europe</a></td>
+              
+            </tr>
+            <tr>
+              
+              <td width=5 class="yellowtext">&nbsp;*&nbsp;</td><td width=160 class="yellowtext"><a href="../n_america.htm" class="yellowlink">N. & Central America</a></td>
+              
+            </tr>
+            <tr>
+              
+              <td width=5 class="yellowtext">&nbsp;*&nbsp;</td><td width=160 class="yellowtext"><a href="../s_america.htm" class="yellowlink">S. America</a></td>
+              
+            </tr>
+            <tr>
+              
+              <td width=5 class="yellowtext">&nbsp;*&nbsp;</td><td width=160 class="yellowtext"><a href="../pacific.htm" class="yellowlink">S.W. Pacific</a></td>
+              
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td><hr></td>
+      </tr>
+      <tr>
+        <td bgcolor="#6699FF" class="whitetext"><a href="../wisnew.htm" class="whitelink">&nbsp;What's New</a></td>
+      </tr>
+      <tr>
+        <td class="whitetext">
+          <table cellspacing=0 cellpadding=0>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#polish_press" class="whitelink">Poland launched Polish version</a>&nbsp;
+<img src=/img/new.gif border=0></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#mobile" class="whitelink">MyWorldWeather - the mobile application of WWIS launched</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#russian_press" class="whitelink">Russia launched Russian version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#future_version" class="whitelink">Future version of WWIS launched</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#italian_press" class="whitelink">Italy launched Italian version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#german_press" class="whitelink">Germany launched German version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#french_press" class="whitelink">France launched French version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm#spanish_press" class="whitelink">Spain launched Spanish version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../event.htm" class="whitelink">New domain name for WWIS</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext" valign="top">&nbsp;*&nbsp;</td><td class="whitetext" valign="top"><a href="../wisnew.htm" class="whitelink">WWIS includes city map and photo</a></td>
+	</tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="height8">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#6699FF" class="whitetext"><a href="../links.htm" class="whitelink">&nbsp;Related Web Sites</a></td>
+      </tr>
+      <tr>
+        <td class="whitetext">
+          <table cellspacing=0 cellpadding=0>
+            <tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a class="whitelink" href="javascript:MM_openBrWindow('http://www.wmo.int','','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=600,height=400')" title="World Meteorological Organization">WMO</a></td>
+            </tr>
+            <tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a class="whitelink" href="javascript:MM_openBrWindow('http://severe.worldweather.wmo.int/','','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=600,height=400')" title="Severe Weather Information Centre">Severe Weather</a></td>
+            </tr>
+            <tr>
+            
+            </tr>
+          </table>
+        </td>
+      <tr>
+        <td class="height8">&nbsp; </td>
+      </tr>
+      <tr>
+        <td bgcolor="#6699FF" class="whitetext">&nbsp;Other Languages</td>
+      </tr>
+      <tr>
+        <td class="whitetext">
+	<table cellspacing=0 cellpadding=0>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://worldweather.met.gov.om:8000/" class="whitelink" title="Arabic Version">Arabic Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://www.worldweather.cn/" class="whitelink" title="Chinese Version">Chinese Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://wmo.meteo.pt/" class="whitelink" title="Portuguese Version">Portuguese Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://wwis.inm.es" class="whitelink" title="Spanish Version">Spanish Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://www.meteo.fr/wwis/" class="whitelink" title="French Version">French Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://www.wwis.dwd.de" class="whitelink" title="German Version">German Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://wwis.meteoam.it/" class="whitelink" title="Italian Version">Italian Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://wwis.meteoinfo.ru/" class="whitelink" title="Russian Version">Russian Version</a></td>
+	</tr>
+	<tr>
+              <td width=5 class="whitetext">&nbsp;*&nbsp;</td>
+              <td class="whitetext"><a href="http://wmo.imgw.pl/wwis/" class="whitelink" title="Polish Version">Polish Version</a></td>
+	</tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td><hr></td>
+      </tr>
+      <tr>
+        
+        <td class="whitetext">&nbsp;<a href="../pilot.htm" class="whitelink">About This Web Site</a></td>
+        
+      </tr>
+      <tr>
+        
+        <td class="whitetext">&nbsp;<a href="../members.htm" class="whitelink">Participating Members</a></td>
+        
+      </tr>
+      <tr>
+        
+        <td class="whitetext">&nbsp;<a href="../wx_icon.htm" class="whitelink">Weather Icons</a></td>
+        
+      </tr>
+      <tr>
+        <td class="whitetext">&nbsp;<a href="../event/wwis_swic_e.pdf" class="whitelink">Introductory Pamphlet</a></td>
+      </tr>
+	  <tr>
+        <td class="whitetext">&nbsp;<a href="../event/nomination.doc" class="whitelink">Nomination Form</a></td>
+      </tr>
+      <tr>
+        
+        <script language="JavaScript">
+          function go2search() {
+            self.location.href = self.location.protocol + "//" + self.location.hostname + "/webapps/search.jsp";
+          }
+        </script>
+        <td class="whitetext">&nbsp;<a href="javascript:go2search()" class="whitelink">Search</a></td>
+        
+      </tr>
+      <tr>
+        <td class="whitetext">&nbsp;<a href="mailto: webmaster@worldweather.org" class="whitelink">Contact</a></td>
+      </tr>
+      <tr>
+        
+        <td class="whitetext">&nbsp;<a href="../note.htm" class="whitelink">Note to User</a></td>
+        
+      </tr>
+      <tr>
+        
+        <td class="whitetext">&nbsp;<a href="../disclaimer.htm" class="whitelink">Disclaimer</a></td>
+        
+      </tr>
+      
+      <tr>
+        <td class="yellowtext">&nbsp;<a href="../index.htm" class="yellowlink">Back to Main Page</a></td>
+      </tr>
+      
+      <tr>
+        <td><hr></td>
+      </tr>
+      <tr>
+	<td align="center">
+	<table width="177" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+        <td align=justify bgcolor="#ECF5FF">
+This web site is operated <br>on behalf of WMO by
+        <br>
+<img src="/img/r236g245.png" width=39 height=22>
+        <a href="javascript:MM_openBrWindow('http://www.weather.gov.hk/','','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=600,height=400')">
+<img src="/img/hkoicon.gif" border=0 align="center"></a>
+        <br>
+        <a href="javascript:MM_openBrWindow('http://www.weather.gov.hk/','','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=600,height=400')">
+        Hong Kong Observatory</a><br>of Hong Kong, China.
+        </td> 
+        </tr>
+	</table>
+        </td> 
+        </tr>
+    </table>
+
+    </td>
+    <td bgcolor="#FFFFFF" width="12" background="../img/left_back.png">&nbsp;</td>
+    <td bgcolor="#FFFFFF" valign="top" align="center"> 
+      <table border="0" cellspacing="0" cellpadding="0" height="40">
+        <tr align="center"> 
+          <td><a href="../index.htm"><img src="../img/mainlogo4.png" width="400" height="30" alt="World Weather Information Service" border="0"></a></td>
+        </tr>
+      </table>
+      <br>
+      <table width="565" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="565" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td align="center"> 
+                  <table border="0" cellspacing="0" cellpadding="0" width="565" align="left" height="80">
+                    <tr> 
+                      <td width="280"> 
+                        <table border="0" cellspacing="0" cellpadding="0" width="280">
+                          <tr> 
+                            <td class="siteheader"><b><font class="text14">United States of America</font></b></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<hr noshade></td>
+                          </tr>
+                          <tr> 
+                            <td class="siteheader">
+                            
+		              <font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#3333FF"><a href="javascript:MM_openBrWindow('../sitelink.htm?link=http://www.nws.noaa.gov/','','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=565,height=400')">National Weather Service</a></font></b></font></font>
+                            
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td align="center" width="280"> 
+                      
+		        <a href="javascript:MM_openBrWindow('../sitelink.htm?link=http://www.nws.noaa.gov/','','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=565,height=400')">
+		        <img src="usa_logo.png" alt="National Weather Service" border="0"></a>
+                      
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>  
+                <td>
+                  <div align="right">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="485">&nbsp;</td>
+                      <td width="40" align="center"><a href="javascript:MM_openBrWindow('m093m.htm','','scrollbars=yes,width=680,height=580')"><img src="../img/map_word.png" alt="MAP" width="35" height="10" border="0"><img src="m093_icon.png" alt="MAP" width="35" height="35" border="0"></a></td>
+                      
+                    </tr> 
+                  </table> 
+                  </div>
+                </td> 
+              </tr>                            
+              
+              <tr> 
+                <td>                  
+                  <table width="565" border="0" cellspacing="2" cellpadding="0">
+                    <tr>
+                      <td width="150" bgcolor="#FFCC99">&nbsp; Please <font color="#990000"><b>SELECT</b></font>&nbsp;City :</td>
+                      <td width="415">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        <tr> 
+          <td><i>&nbsp;(In alphabetical order)</i></td>
+        </tr>
+        <tr> 
+          <td><hr></td>
+        </tr>
+        
+        
+        <tr> 
+          <td> 
+            <br>
+            <table border="0" width="565" cellspacing="0" cellpadding="0">
+              <tr align="center"> 
+              
+                <td width="20"><b><a href="#A" class="blacklink">A</a></b></td>
+              
+                <td width="20"><b><a href="#B" class="blacklink">B</a></b></td>
+              
+                <td width="20"><b><a href="#C" class="blacklink">C</a></b></td>
+              
+                <td width="20"><b><a href="#D" class="blacklink">D</a></b></td>
+              
+                <td width="20"><b><a href="#E" class="blacklink">E</a></b></td>
+              
+                <td width="20"><b><a href="#F" class="blacklink">F</a></b></td>
+              
+                <td width="20"><b><a href="#G" class="blacklink">G</a></b></td>
+              
+                <td width="20"><b><a href="#H" class="blacklink">H</a></b></td>
+              
+                <td width="20"><b><a href="#I" class="blacklink">I</a></b></td>
+              
+                <td width="20"><b><a href="#J" class="blacklink">J</a></b></td>
+              
+                <td width="20"><b><a href="#K" class="blacklink">K</a></b></td>
+              
+                <td width="20"><b><a href="#L" class="blacklink">L</a></b></td>
+              
+                <td width="20"><b><a href="#M" class="blacklink">M</a></b></td>
+              
+                <td width="20"><b><a href="#N" class="blacklink">N</a></b></td>
+              
+                <td width="20"><b><a href="#O" class="blacklink">O</a></b></td>
+              
+                <td width="20"><b><a href="#P" class="blacklink">P</a></b></td>
+              
+		<td width="20"><b><font color="#CCCCCC">Q</font></b></td>
+              
+                <td width="20"><b><a href="#R" class="blacklink">R</a></b></td>
+              
+                <td width="20"><b><a href="#S" class="blacklink">S</a></b></td>
+              
+                <td width="20"><b><a href="#T" class="blacklink">T</a></b></td>
+              
+		<td width="20"><b><font color="#CCCCCC">U</font></b></td>
+              
+		<td width="20"><b><font color="#CCCCCC">V</font></b></td>
+              
+                <td width="20"><b><a href="#W" class="blacklink">W</a></b></td>
+              
+		<td width="20"><b><font color="#CCCCCC">X</font></b></td>
+              
+                <td width="20"><b><a href="#Y" class="blacklink">Y</a></b></td>
+              
+		<td width="20"><b><font color="#CCCCCC">Z</font></b></td>
+              
+              </tr>
+            </table>
+            <br>
+            <table border="0" cellspacing="0" cellpadding="0">
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="A"></a>A</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00703.htm" class="text15"><font class="text15">Abilene, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00711.htm" class="text15"><font class="text15">Akron, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00712.htm" class="text15"><font class="text15">Albany, New York</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00713.htm" class="text15"><font class="text15">Albuquerque, New Mexico</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00714.htm" class="text15"><font class="text15">Allentown, Pennsylvania</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00715.htm" class="text15"><font class="text15">Amarillo, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00716.htm" class="text15"><font class="text15">Anchorage, Alaska</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00717.htm" class="text15"><font class="text15">Asheville, North Carolina</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00268.htm" class="text15"><font class="text15">Atlanta, Georgia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00718.htm" class="text15"><font class="text15">Atlantic City, New Jersey</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00719.htm" class="text15"><font class="text15">Austin, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="B"></a>B</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00720.htm" class="text15"><font class="text15">Baltimore, Maryland</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00721.htm" class="text15"><font class="text15">Baton Rouge, Louisiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00722.htm" class="text15"><font class="text15">Billings, Montana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00723.htm" class="text15"><font class="text15">Birmingham, Alabama</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00724.htm" class="text15"><font class="text15">Bismarck, North Dakota</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00725.htm" class="text15"><font class="text15">Boise, Idaho</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00273.htm" class="text15"><font class="text15">Boston, Massachusetts</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00726.htm" class="text15"><font class="text15">Bridgeport, Connecticut</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00727.htm" class="text15"><font class="text15">Brownsville, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00728.htm" class="text15"><font class="text15">Buffalo, New York</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00729.htm" class="text15"><font class="text15">Burlington, Vermont</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="C"></a>C</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00730.htm" class="text15"><font class="text15">Caribou, Maine</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00731.htm" class="text15"><font class="text15">Casper, Wyoming</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00732.htm" class="text15"><font class="text15">Charleston, South Carolina</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00733.htm" class="text15"><font class="text15">Charleston, West Virginia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00734.htm" class="text15"><font class="text15">Charlotte, North Carolina</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00735.htm" class="text15"><font class="text15">Chattanooga, Tennessee</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00736.htm" class="text15"><font class="text15">Cheyenne, Wyoming</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00274.htm" class="text15"><font class="text15">Chicago, Illinois</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00737.htm" class="text15"><font class="text15">Cincinnati, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00738.htm" class="text15"><font class="text15">Cleveland, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00739.htm" class="text15"><font class="text15">Colorado Springs, Colorado</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00740.htm" class="text15"><font class="text15">Columbia, South Carolina</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00741.htm" class="text15"><font class="text15">Columbus, Georgia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00742.htm" class="text15"><font class="text15">Columbus, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00743.htm" class="text15"><font class="text15">Concord, New Hampshire</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00744.htm" class="text15"><font class="text15">Corpus Christi, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="D"></a>D</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00745.htm" class="text15"><font class="text15">Dallas Ft Worth, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00746.htm" class="text15"><font class="text15">Dayton, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00747.htm" class="text15"><font class="text15">Daytona Beach, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00271.htm" class="text15"><font class="text15">Denver, Colorado</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00748.htm" class="text15"><font class="text15">Des Moines, Iowa</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00275.htm" class="text15"><font class="text15">Detroit, Michigan</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00749.htm" class="text15"><font class="text15">Duluth, Minnesota</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="E"></a>E</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00750.htm" class="text15"><font class="text15">El Paso, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00751.htm" class="text15"><font class="text15">Elkins, West Virginia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00752.htm" class="text15"><font class="text15">Erie, Pennsylvania</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00753.htm" class="text15"><font class="text15">Eugene, Oregon</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00754.htm" class="text15"><font class="text15">Evansville, Indiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="F"></a>F</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00755.htm" class="text15"><font class="text15">Fairbanks, Alaska</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00756.htm" class="text15"><font class="text15">Fargo, North Dakota</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00757.htm" class="text15"><font class="text15">Flagstaff, Arizona</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00758.htm" class="text15"><font class="text15">Flint, Michigan</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00759.htm" class="text15"><font class="text15">Fort Smith, Arkansas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00760.htm" class="text15"><font class="text15">Fort Wayne, Indiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00761.htm" class="text15"><font class="text15">Fresno, California</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="G"></a>G</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00762.htm" class="text15"><font class="text15">Goodland, Kansas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00763.htm" class="text15"><font class="text15">Grand Junction, Colorado</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00764.htm" class="text15"><font class="text15">Grand Rapids, Michigan</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00765.htm" class="text15"><font class="text15">Great Falls, Montana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00766.htm" class="text15"><font class="text15">Green Bay, Wisconsin</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00767.htm" class="text15"><font class="text15">Greensboro, North Carolina</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="H"></a>H</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00768.htm" class="text15"><font class="text15">Harrisburg, Pennsylvania</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00769.htm" class="text15"><font class="text15">Helena, Montana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00849.htm" class="text15"><font class="text15">Honolulu, Hawaii</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00770.htm" class="text15"><font class="text15">Houston, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00771.htm" class="text15"><font class="text15">Huntsville, Alabama</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="I"></a>I</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00772.htm" class="text15"><font class="text15">Indianapolis, Indiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="J"></a>J</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00773.htm" class="text15"><font class="text15">Jackson, Mississippi</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00774.htm" class="text15"><font class="text15">Jacksonville, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00775.htm" class="text15"><font class="text15">Juneau, Alaska</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="K"></a>K</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00776.htm" class="text15"><font class="text15">Kansas City, Missouri</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00777.htm" class="text15"><font class="text15">Key West, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00778.htm" class="text15"><font class="text15">Knoxville, Tennessee</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="L"></a>L</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00779.htm" class="text15"><font class="text15">Lake Charles, Louisiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00780.htm" class="text15"><font class="text15">Lansing, Michigan</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00781.htm" class="text15"><font class="text15">Las Vegas, Nevada</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00782.htm" class="text15"><font class="text15">Lexington, Kentucky</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00783.htm" class="text15"><font class="text15">Lincoln, Nebraska</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00784.htm" class="text15"><font class="text15">Little Rock, Arkansas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00269.htm" class="text15"><font class="text15">Los Angeles, California</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00785.htm" class="text15"><font class="text15">Louisville, Kentucky</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00786.htm" class="text15"><font class="text15">Lubbock, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="M"></a>M</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00787.htm" class="text15"><font class="text15">Macon, Georgia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00788.htm" class="text15"><font class="text15">Madison, Wisconsin</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00789.htm" class="text15"><font class="text15">Medford, Oregon</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00790.htm" class="text15"><font class="text15">Memphis, Tennessee</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00267.htm" class="text15"><font class="text15">Miami, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00791.htm" class="text15"><font class="text15">Milwaukee, Wisconsin</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00276.htm" class="text15"><font class="text15">Minneapolis, Minnesota</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00792.htm" class="text15"><font class="text15">Mobile, Alabama</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00793.htm" class="text15"><font class="text15">Montgomery, Alabama</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="N"></a>N</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00794.htm" class="text15"><font class="text15">Nashville, Tennessee</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00795.htm" class="text15"><font class="text15">New Orleans, Louisiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00278.htm" class="text15"><font class="text15">New York City, New York</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00796.htm" class="text15"><font class="text15">Newark, New Jersey</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00797.htm" class="text15"><font class="text15">Norfolk, Virginia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00798.htm" class="text15"><font class="text15">North Platte, Nebraska</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="O"></a>O</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00799.htm" class="text15"><font class="text15">Oklahoma City, Oklahoma</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00800.htm" class="text15"><font class="text15">Omaha, Nebraska</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00801.htm" class="text15"><font class="text15">Orlando, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="P"></a>P</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00802.htm" class="text15"><font class="text15">Paducah, Kentucky</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00803.htm" class="text15"><font class="text15">Pendleton, Oregon</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00804.htm" class="text15"><font class="text15">Peoria, Illinois</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00805.htm" class="text15"><font class="text15">Philadelphia, Pennsylvania</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00806.htm" class="text15"><font class="text15">Phoenix, Arizona</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00807.htm" class="text15"><font class="text15">Pittsburgh, Pennsylvania</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00808.htm" class="text15"><font class="text15">Pocatello, Idaho</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00809.htm" class="text15"><font class="text15">Portland, Maine</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00810.htm" class="text15"><font class="text15">Portland, Oregon</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00811.htm" class="text15"><font class="text15">Providence, Rhode Island</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00812.htm" class="text15"><font class="text15">Pueblo, Colorado</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="R"></a>R</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00813.htm" class="text15"><font class="text15">Raleigh & Durham, North Carolina</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00814.htm" class="text15"><font class="text15">Rapid City, South Dakota</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00815.htm" class="text15"><font class="text15">Reno, Nevada</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00816.htm" class="text15"><font class="text15">Richmond, Virginia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00817.htm" class="text15"><font class="text15">Roanoke, Virginia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00818.htm" class="text15"><font class="text15">Rochester, New York</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00819.htm" class="text15"><font class="text15">Rockford, Illinois</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="S"></a>S</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00820.htm" class="text15"><font class="text15">Sacramento, California</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00822.htm" class="text15"><font class="text15">Salem, Oregon</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00823.htm" class="text15"><font class="text15">Salt Lake City, Utah</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00824.htm" class="text15"><font class="text15">San Angelo, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00825.htm" class="text15"><font class="text15">San Antonio, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00826.htm" class="text15"><font class="text15">San Diego, California</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00272.htm" class="text15"><font class="text15">San Francisco, California</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00852.htm" class="text15"><font class="text15">San Jose, California</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00850.htm" class="text15"><font class="text15">San Juan, Puerto Rico</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00827.htm" class="text15"><font class="text15">Sault Ste. Marie, Michigan</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00828.htm" class="text15"><font class="text15">Savannah, Georgia</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00277.htm" class="text15"><font class="text15">Seattle, Washington</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00829.htm" class="text15"><font class="text15">Shreveport, Louisiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00830.htm" class="text15"><font class="text15">Sioux City, Iowa</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00831.htm" class="text15"><font class="text15">Sioux Falls, South Dakota</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00832.htm" class="text15"><font class="text15">South Bend, Indiana</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00833.htm" class="text15"><font class="text15">Spokane, Washington</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00834.htm" class="text15"><font class="text15">Springfield, Illinois</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00835.htm" class="text15"><font class="text15">Springfield, Missouri</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00821.htm" class="text15"><font class="text15">St. Louis, Missouri</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00836.htm" class="text15"><font class="text15">Syracuse, New York</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="T"></a>T</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00837.htm" class="text15"><font class="text15">Tallahassee, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00853.htm" class="text15"><font class="text15">Tampa, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00838.htm" class="text15"><font class="text15">Toledo, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00839.htm" class="text15"><font class="text15">Topeka, Kansas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00840.htm" class="text15"><font class="text15">Tucson, Arizona</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00841.htm" class="text15"><font class="text15">Tulsa, Oklahoma</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="W"></a>W</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00842.htm" class="text15"><font class="text15">Waco, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00270.htm" class="text15"><font class="text15">WASHINGTON DC</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00843.htm" class="text15"><font class="text15">West Palm Beach, Florida</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00844.htm" class="text15"><font class="text15">Wichita Falls, Texas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00851.htm" class="text15"><font class="text15">Wichita, Kansas</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00845.htm" class="text15"><font class="text15">Wilkes Barre, Pennsylvania</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            
+              <tr> 
+                <td width="20"></td>
+                <td class="text15" width="180"><b><a name="Y"></a>Y</b></td>
+                <td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00846.htm" class="text15"><font class="text15">Yakima, Washington</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#FBFFE6" class="text15">
+            
+		  <a href="c00847.htm" class="text15"><font class="text15">Youngstown, Ohio</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20">&nbsp;</td>
+            
+		<td bgcolor="#ECF1FF" class="text15">
+            
+		  <a href="c00848.htm" class="text15"><font class="text15">Yuma, Arizona</font></a><br>
+		</td>
+		<td class="text15" width="180">&nbsp;</td>
+              </tr>
+            
+              <tr> 
+                <td width="20"> </td>
+                <td class="text15" width="180">&nbsp;</td>
+                <td class="text15" width="180"><a href="#top"><img src="../img/top.png" width="34" height="21" border="0" alt="Top"></a></td>
+              </tr>
+            </table>
+            <br>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td width="565" align="right">
+            <table width="560" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="560" align="left" colspan=2>&nbsp;<i>Remarks:</i></td>
+            </tr>
+            <tr>
+              <td width="40" align="center" valign="top">*</td>
+              <td width="520" align="left"><i>Information presented here is in part derived from official U.S. National Weather Service products.</i></td>
+            </tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        <tr> 
+          <td>
+          
+            <hr>
+          
+	  </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+</table>
+
+<!-- This page is generated by member.jsp -->
+<!-- Re-written by Dennis N.K. Cheng AP(F)51, HKO on 16-Oct-2006-->
+</body>
+</html>
