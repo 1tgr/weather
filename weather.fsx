@@ -185,20 +185,112 @@ let urls =
         "198/c01374.htm", "UK - Isle of Man"
     |]
 
-let client = new HtmlWeb(CachePath = "cache", UsingCache = true)
-let baseUrl = Uri("http://www.worldweather.org")
+let select xpath (node : HtmlNode) =
+    match node.SelectNodes(xpath) with
+    | null -> [ ]
+    | nodes -> List.ofSeq nodes
 
-for countryUrl, countryDesc in urls do
-    let countryUrl = Uri(baseUrl, countryUrl)
-    printfn "%O (%s)" countryUrl countryDesc
-    let countryDoc = client.Load(string countryUrl)
+type ClimateField =
+    | MinTemperature
+    | MaxTemperature
+    | Rainfall
+    | RainDays
 
-    match countryDoc.DocumentNode.SelectNodes("//a[@class='text15']") with
-    | null -> ()
-    | cityNodes ->
-        for node in cityNodes do
-            let cityUrl = Uri(countryUrl, node.GetAttributeValue("href", ""))
-            let cityDesc = node.InnerText
-            printfn "\t%O (%s)" cityUrl cityDesc
-            let cityDoc = client.Load(string cityUrl)
-            ()
+let parseClimate (doc : HtmlDocument) : Map<string * ClimateField, double> =
+    let parse field s =
+        match s, Double.TryParse(s) with
+        | ("Trace" | "TR" | "Nil" | "/"), (_, _) -> 0.0
+        | _, (true, d) -> d
+        | _, (false, _) -> failwithf "Can't parse %s = %s" field s
+
+    Map.ofSeq <| seq {
+        for row in select "//table[tr/td[@class='climat_header']]/tr" doc.DocumentNode do
+            match select "td" row with
+            | [ month; minTemperature; maxTemperature; rainfall; rainDays ] ->
+                let month = month.InnerText.Trim()
+                yield (month, MinTemperature), (parse "MinTemperature" minTemperature.InnerText)
+                yield (month, MaxTemperature), (parse "MaxTemperature" maxTemperature.InnerText)
+                yield (month, Rainfall), (parse "Rainfall" rainfall.InnerText)
+                yield (month, RainDays), (parse "RainDays" rainDays.InnerText)
+
+            | _ -> ()
+    }
+
+let keys m = Set.ofSeq (Seq.map fst (Map.toSeq m))
+
+let pearson p1 p2 =
+    match Set.intersect (keys p1) (keys p2) with
+    | si when not (Set.isEmpty si) ->
+        let sum1 = List.sum [for it in si -> p1.[it]]
+        let sum2 = List.sum [for it in si -> p2.[it]]
+
+        let sum1Sq = List.sum [for it in si -> pown p1.[it] 2]
+        let sum2Sq = List.sum [for it in si -> pown p2.[it] 2]
+
+        let pSum = List.sum [for it in si -> p1.[it] * p2.[it]]
+
+        let n = double (Set.count si)
+        let num = pSum - (sum1 * sum2 / n)
+        match sqrt ((sum1Sq - (pown sum1 2) / n) * (sum2Sq - (pown sum2 2) / n)) with
+        | 0.0 -> 0.0
+        | den -> num / den
+
+    | _ -> 0.0
+
+let sim climates city1 city2 =
+    let picker s (key : string) =
+        match key.IndexOf(s, StringComparison.InvariantCultureIgnoreCase) with
+        | -1 -> fun _ -> None
+        | _ -> Some
+
+    let p1 = Map.pick (picker city1) climates
+    let p2 = Map.pick (picker city2) climates
+    pearson p1 p2
+
+let climates =
+    let client = HtmlWeb(CachePath = Path.GetFullPath("cache"), UsingCache = true, CacheOnly = true)
+    let baseUrl = Uri("http://www.worldweather.org")
+
+    Map.ofSeq <| seq {
+        for countryUrl, countryDesc in urls do
+            let countryUrl = Uri(baseUrl, countryUrl)
+            printf "%s ... " countryDesc
+            stdout.Flush()
+            let countryDoc = client.Load(string countryUrl)
+
+            match parseClimate countryDoc with
+            | c when not (Map.isEmpty c) -> yield (countryDesc, None), c
+            | _ -> ()
+
+            for node in select "//a[@class='text15']" countryDoc.DocumentNode do
+                let cityUrl = Uri(countryUrl, node.GetAttributeValue("href", ""))
+                let cityDesc = node.InnerText
+                printf "%s " cityDesc
+                stdout.Flush()
+                let cityDoc = client.Load(string cityUrl)
+                match parseClimate cityDoc with
+                | c when not (Map.isEmpty c) -> yield (countryDesc, Some cityDesc), c
+                | _ -> ()
+
+            printfn "done"
+    }
+
+let correlations climate1 =
+    climates
+    |> Map.map (fun _ -> pearson climate1)
+    |> Map.toSeq
+    |> Seq.sortBy (fun (_, correl) -> -correl)
+    |> Seq.truncate 10
+    |> Array.ofSeq
+
+let london = climates.["United Kingdom of Great Britain and Northern Ireland", Some "LONDON"]
+let likeLondon = correlations london
+
+let likeNicePlace factors =
+    let factors = Map.ofSeq factors
+    let mapper (_, field) =
+        match Map.tryFind field factors with
+        | Some factor -> (*) factor
+        | None -> id
+
+    correlations (Map.map mapper london)
