@@ -1,8 +1,23 @@
+#I @"packages\HtmlAgilityPack\lib"
+#I @"packages\MSDN.FSharpChart.dll\lib"
 #r "HtmlAgilityPack.dll"
+#r "MSDN.FSharpChart.dll"
+#r "System.Windows.Forms.DataVisualization"
 open System
 open System.IO
 open System.Net
+open System.Windows.Forms
 open HtmlAgilityPack
+open Microsoft.FSharp.Reflection
+open MSDN.FSharp.Charting
+open MSDN.FSharp.Charting.ChartTypes
+
+fsi.AddPrinter <| fun ch ->
+    let frm = new Form(Visible = true, TopMost = true, Width = 700, Height = 500)
+    let ctl = new ChartControl(ch, Dock = DockStyle.Fill)
+    frm.Controls.Add(ctl)
+    frm.Show()
+    "(Chart)"
 
 let urls =
     [|
@@ -190,31 +205,59 @@ let select xpath (node : HtmlNode) =
     | null -> [ ]
     | nodes -> List.ofSeq nodes
 
+type Month =
+    | Jan
+    | Feb
+    | Mar
+    | Apr
+    | May
+    | Jun
+    | Jul
+    | Aug
+    | Sep
+    | Oct
+    | Nov
+    | Dec
+
 type ClimateField =
     | MinTemperature
     | MaxTemperature
     | Rainfall
     | RainDays
 
-let parseClimate (doc : HtmlDocument) : Map<string * ClimateField, double> =
+let parseClimate : HtmlDocument -> Map<Month * ClimateField, double> =
     let parse field s =
         match s, Double.TryParse(s) with
         | ("Trace" | "TR" | "Nil" | "/"), (_, _) -> 0.0
         | _, (true, d) -> d
         | _, (false, _) -> failwithf "Can't parse %s = %s" field s
 
-    Map.ofSeq <| seq {
-        for row in select "//table[tr/td[@class='climat_header']]/tr" doc.DocumentNode do
-            match select "td" row with
-            | [ month; minTemperature; maxTemperature; rainfall; rainDays ] ->
-                let month = month.InnerText.Trim()
-                yield (month, MinTemperature), (parse "MinTemperature" minTemperature.InnerText)
-                yield (month, MaxTemperature), (parse "MaxTemperature" maxTemperature.InnerText)
-                yield (month, Rainfall), (parse "Rainfall" rainfall.InnerText)
-                yield (month, RainDays), (parse "RainDays" rainDays.InnerText)
+    let parseMonth =
+        let cases = [
+            for case in FSharpType.GetUnionCases(typeof<Month>) ->
+                case.Name, unbox (FSharpValue.MakeUnion(case, [| |]))
+        ]
 
-            | _ -> ()
-    }
+        let picker s (name, case) =
+            if s = name
+            then Some case
+            else None
+
+        fun s -> List.pick (picker s) cases
+
+    fun doc ->
+        Map.ofSeq <| seq {
+            for row in select "//table[tr/td[@class='climat_header']]/tr" doc.DocumentNode do
+                match select "td" row with
+                | [ month; minTemperature; maxTemperature; rainfall; rainDays ] ->
+                    let month = parseMonth (month.InnerText.Trim())
+                    yield (month, MinTemperature), (parse "MinTemperature" minTemperature.InnerText)
+                    yield (month, MaxTemperature), (parse "MaxTemperature" maxTemperature.InnerText)
+                    yield (month, Rainfall), (parse "Rainfall" rainfall.InnerText)
+                    yield (month, RainDays), (parse "RainDays" rainDays.InnerText)
+
+                | _ -> ()
+        }
 
 let keys m = Set.ofSeq (Seq.map fst (Map.toSeq m))
 
@@ -248,13 +291,13 @@ let sim climates city1 city2 =
     pearson p1 p2
 
 let climates =
-    let client = HtmlWeb(CachePath = Path.GetFullPath("cache"), UsingCache = true, CacheOnly = true)
+    let client = HtmlWeb(CachePath = Path.GetFullPath(@"C:\Users\Tim\Git\weather\cache"), UsingCache = true, CacheOnly = true)
     let baseUrl = Uri("http://www.worldweather.org")
 
-    Map.ofSeq <| seq {
-        for countryUrl, countryDesc in urls do
+    let mapper i (countryUrl : string, countryDesc) =
+        seq {
             let countryUrl = Uri(baseUrl, countryUrl)
-            printf "%s ... " countryDesc
+            printf "[%d/%d] %s ... " (i + 1) (Array.length urls) countryDesc
             stdout.Flush()
             let countryDoc = client.Load(string countryUrl)
 
@@ -273,7 +316,13 @@ let climates =
                 | _ -> ()
 
             printfn "done"
-    }
+        }
+
+    urls
+    |> Seq.sortBy snd
+    |> Seq.mapi mapper
+    |> Seq.concat
+    |> Map.ofSeq
 
 let correlations climate1 =
     climates
@@ -281,16 +330,66 @@ let correlations climate1 =
     |> Map.toSeq
     |> Seq.sortBy (fun (_, correl) -> -correl)
     |> Seq.truncate 10
-    |> Array.ofSeq
+    |> List.ofSeq
 
-let london = climates.["United Kingdom of Great Britain and Northern Ireland", Some "LONDON"]
-let likeLondon = correlations london
+let london = "United Kingdom of Great Britain and Northern Ireland", Some "LONDON"
+let likeLondon = correlations climates.[london]
 
-let likeNicePlace factors =
+let nicePlace factors =
     let factors = Map.ofSeq factors
-    let mapper (_, field) =
-        match Map.tryFind field factors with
-        | Some factor -> (*) factor
-        | None -> id
+    let mapper (_, field) = defaultArg (Map.tryFind field factors) id
+    Map.map mapper climates.[london]
 
-    correlations (Map.map mapper london)
+let compare label1 label2 =
+    let label =
+        function
+        | country, Some city -> sprintf "%s, %s" city country
+        | country, None -> country
+
+    let climate1 = climates.[label1]
+    let climate2 = climates.[label2]
+
+    let label1 = label label1
+    let label2 = label label2
+
+    let data field map : (_ * double) list =
+        let chooser =
+            function
+            | (x, f), y when f = field -> Some (x, y)
+            | _ -> None
+
+        List.choose chooser (Map.toList map)
+
+    let formatX data =
+        [ for x, y in data -> sprintf "%A" x, y ]
+
+    let range minField maxField =
+        let min1 = Map.ofList (data minField climate1)
+        let max1 = Map.ofList (data maxField climate1)
+        let min2 = Map.ofList (data minField climate2)
+        let max2 = Map.ofList (data maxField climate2)
+        let data1 = Seq.map (fun k -> k, (min1.[k], max1.[k])) (Set.intersect (keys min1) (keys max1))
+        let data2 = Seq.map (fun k -> k, (min2.[k], max2.[k])) (Set.intersect (keys min2) (keys max2))
+        [
+            data1 |> formatX |> FSharpChart.RangeColumn |> FSharpChart.WithLegend(label1) :> GenericChart
+            data2 |> formatX |> FSharpChart.RangeColumn |> FSharpChart.WithLegend(label2) :> GenericChart
+        ]
+        |> FSharpChart.Combine
+        |> FSharpChart.WithArea.AxisY(Title = sprintf "%A/%A" minField maxField)
+
+    let column field =
+        [
+            data field climate1 |> formatX |> FSharpChart.Column |> FSharpChart.WithLegend(label1) :> GenericChart
+            data field climate2 |> formatX |> FSharpChart.Column |> FSharpChart.WithLegend(label2) :> GenericChart
+        ]
+        |> FSharpChart.Combine
+        |> FSharpChart.WithArea.AxisY(Title = sprintf "%A" field)
+
+    [
+        range MinTemperature MaxTemperature :> GenericChart
+        column Rainfall :> GenericChart
+        column RainDays :> GenericChart
+    ]
+    |> FSharpChart.Rows
+
+correlations (nicePlace [ RainDays, (*) 0.2; Rainfall, (*) 0.5 ]) |> List.head ||> fun name _ -> compare london name
