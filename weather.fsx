@@ -185,16 +185,20 @@ let urls =
         "198/c01374.htm", "UK - Isle of Man"
     |]
 
-let client = new HtmlWeb()
+let client = new HtmlWeb(CachePath = "cache", UsingCache = true)
 let baseUrl = Uri("http://www.worldweather.org")
 
-for url, desc in urls do
-    printfn "%s" desc
-    printfn "\t%s" url
-    let countryDoc = client.Load(Uri(baseUrl, url).ToString())
+for countryUrl, countryDesc in urls do
+    let countryUrl = Uri(baseUrl, countryUrl)
+    printfn "%O (%s)" countryUrl countryDesc
+    let countryDoc = client.Load(string countryUrl)
 
-    for node in countryDoc.DocumentNode.SelectNodes("a[class='text15']") do
-        let cityUrl = node.GetAttributeValue("href", "")
-        printfn "\t%s" cityUrl
-        let cityDoc = client.Load(Uri(baseUrl, cityUrl).ToString())
-        ()
+    match countryDoc.DocumentNode.SelectNodes("//a[@class='text15']") with
+    | null -> ()
+    | cityNodes ->
+        for node in cityNodes do
+            let cityUrl = Uri(countryUrl, node.GetAttributeValue("href", ""))
+            let cityDesc = node.InnerText
+            printfn "\t%O (%s)" cityUrl cityDesc
+            let cityDoc = client.Load(string cityUrl)
+            ()
